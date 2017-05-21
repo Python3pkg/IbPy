@@ -36,10 +36,10 @@ if __name__ == '__main__':
 
     inner()
     sleep(5)
-    print('disconnected', con.disconnect())
+    print(('disconnected', con.disconnect()))
     sleep(3)
-    print('reconnected', con.reconnect())
+    print(('reconnected', con.reconnect()))
     inner()
     sleep(3)
 
-    print('again disconnected', con.disconnect())
+    print(('again disconnected', con.disconnect()))

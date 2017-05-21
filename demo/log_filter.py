@@ -67,7 +67,7 @@ def main(args=None):
     fh = sys.stdin if fn == '-' else open(fn)
 
     def badlevel():
-        print >> sys.stderr, 'Unknown log level %s' % opts.loglevel
+        print('Unknown log level %s' % opts.loglevel, file=sys.stderr)
 
     try:
         opts.loglevel = log_level_names[int(opts.loglevel)]

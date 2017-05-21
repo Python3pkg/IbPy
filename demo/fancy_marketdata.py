@@ -7,15 +7,15 @@ from time import sleep
 
 # print all messages from TWS
 def watcher(msg):
-    print msg
+    print(msg)
 
 # show Bid and Ask quotes
 def my_BidAsk(msg):
     if msg.field == 1:
-        print ('%s:%s: bid: %s' % (contractTuple[0],
-                       contractTuple[6], msg.price))
+        print(('%s:%s: bid: %s' % (contractTuple[0],
+                       contractTuple[6], msg.price)))
     elif msg.field == 2:
-        print ('%s:%s: ask: %s' % (contractTuple[0], contractTuple[6], msg.price))
+        print(('%s:%s: ask: %s' % (contractTuple[0], contractTuple[6], msg.price)))
 
 def makeStkContract(contractTuple):
     newContract = Contract()
@@ -26,7 +26,7 @@ def makeStkContract(contractTuple):
     newContract.m_expiry = contractTuple[4]
     newContract.m_strike = contractTuple[5]
     newContract.m_right = contractTuple[6]
-    print ('Contract Values:%s,%s,%s,%s,%s,%s,%s:' % contractTuple)
+    print(('Contract Values:%s,%s,%s,%s,%s,%s,%s:' % contractTuple))
     return newContract
 
 if __name__ == '__main__':

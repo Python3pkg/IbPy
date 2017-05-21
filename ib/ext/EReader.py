@@ -918,7 +918,7 @@ class EReader(Thread):
     def readLong(self):
         """ generated source for method readLong """
         strval = self.readStr()
-        return 0l if strval is None else Long.parseLong(strval)
+        return 0 if strval is None else Long.parseLong(strval)
 
     def readDouble(self):
         """ generated source for method readDouble """
